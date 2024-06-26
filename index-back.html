@@ -1,0 +1,397 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js no-svg ie ie6 lt-ie9 lt-ie8 lt-ie7" lang="en-US"> <![endif]-->
+<!--[if IE 7]><html class="no-js no-svg ie ie7 lt-ie9 lt-ie8" lang="en-US"> <![endif]-->
+<!--[if IE 8]><html class="no-js no-svg ie ie8 lt-ie9" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js no-svg" lang="en-US"> <!--<![endif]-->
+
+<head>
+    <meta charset="UTF-8" />
+
+    <!-- This site is optimized with the Yoast SEO plugin v18.0 - https://yoast.com/wordpress/plugins/seo/ -->
+    <title>Which Moomin character are you? Take the Moomin personality quiz!</title>
+    
+    <style id='global-styles-inline-css' type='text/css'>
+        :root {
+            --wp--preset--color--black: #000000;
+            --wp--preset--color--body-text: #4A4A4A;
+            --wp--preset--color--white: #ffffff;
+            --wp--preset--color--rajah: #FFB760;
+            --wp--preset--color--light-sea-green: #21AFA8;
+            --wp--preset--font-size--small: 13;
+            --wp--preset--font-size--normal: 16;
+            --wp--preset--font-size--medium: 20;
+            --wp--preset--font-size--large: 36;
+            --wp--preset--font-size--huge: 48;
+            --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+            --wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+            --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+            --wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+            --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+            --wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+            --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+            --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+            --wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+            --wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+            --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+            --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+        }
+    </style>
+    <link rel='stylesheet' id='tablepress-default-css'
+        href='src/default.min.css?ver=1.14' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='theme-css-css'
+        href='src/bundle.c2082bf9.css' type='text/css'
+        media='all' />
+    <script type='text/javascript' src='src/jquery.min.js?ver=3.5.1'
+        id='jquery-core-js'></script>
+    
+    
+</head>
+
+<body
+    class="page-template page-template-which-moomin page-template-which-moomin-php page page-id-7791 lang-en which-moomin-are-you"
+    data-template="base.twig">
+    
+
+    <main id="content" class="" role="main" class="content-wrapper">
+        <div class="container-fluid ">
+            <div class="container content-wrapper">
+
+
+
+                <script>
+                    var quiz = {
+                        "social_img_path": "https://assets.moomin.com/static/images/social/characters/fb-",
+                        "fb_uri": "https://www.facebook.com/dialog/feed?app_id=463703117134373&display=popup&",
+                        "twitter_uri": "https://twitter.com/intent/tweet?",
+                        "pinterest_uri": "https://www.pinterest.com/pin/create/button/?",
+                        "pre_title": "I+got ",
+                        "post_title": "%21+Which+Moomin+character+are+you%3F",
+                        "desc_short": "Moomintroll%2C+Snufkin+or+Little+My%3F+Wait+no+more+to+find+out%21",
+                        "you_are": "You are",
+                        "desc": "Are+you+Moomintroll%2C+Snufkin+or+Little+My%3F+Wait+no+more+to+find+out%21",
+                        "site_uri": "https://moomin.com/en/which-moomin-are-you/",
+                        "characterNames": {
+                            "moomintroll": "Moomintroll", "snorkmaiden": "Snorkmaiden", "moominmamma": "Moominmamma", "moominpappa": "Moominpappa", "little-my": "Little My", "snufkin": "Snufkin", "sniff": "Sniff", "stinky": "Stinky", "hattifatteners": "Hattifatteners", "groke": "Groke", "mymble": "Mymble", "too-ticky": "Too-Ticky", "hemulen": "Hemulen", "fillyjonk": "Fillyjonk", "thingummy-and-bob": "Thingumy and Bob",
+                        },
+                        "characterImages": {
+                            "moomintroll": "src/moomintroll.png", "snorkmaiden": "src/snorkmaiden.png", "moominmamma": "src/moominmamma.png", "moominpappa": "src/moominpappa.png", "little-my": "src/little-my.png", "snufkin": "src/snufkin.png", "sniff": "src/sniff.png", "stinky": "src/stinky.png", "hattifatteners": "src/hattifatteners.png", "groke": "src/groke.png", "mymble": "src/mymble.png", "too-ticky": "src/too-ticky.png", "hemulen": "src/hemulen.png", "fillyjonk": "src/fillyjonk.png", "thingummy-and-bob": "src/thingumy-and-bob.png",
+                        },
+                        "characterDescriptions": {
+                            "moomintroll": '<p>You always enjoy the company of your dear friends and you totally trust them, and they trust you. You often get excited about things you see, and you believe that there are many exciting things in the world to explore!</p>\
+<p>Even if you find your home and its surroundings to be the most interesting and safest in the world, you are still curious and daring enough to embark on new adventures!</p>\
+', "snorkmaiden": '<p>You are very kind-hearted, cheerful and lively by nature, and you are the messenger of life&#8217;s joys!</p>\
+<p>Vanity is also a part of your natural appeal. You love daydreaming but at the same time, you impulsively rush to new challenges and adventures.</p>\
+', "moominmamma": '<p>You are the heart of your family! You have both patience and an adventurous spirit. You love to take care of others, and you always have time to listen to and comfort those in need.</p>\
+<p>You enjoy celebrating together with your loved ones, but you also want to find time for peaceful solitude.</p>\
+', "moominpappa": '<p>You possess an adventurous spirit and you enjoy looking back on your life and sharing your wild memories and experiences with others.</p>\
+<p>You believe that things were better in the past and your restlessness always pushes you towards new adventures. Inspired by your youth, you are an irreplaceable party person!</p>\
+', "little-my": '<p>Your curiosity together with your fearless and cheeky attitude makes you an interesting person in the eyes of others!</p>\
+<p>You cheerfully state all the unpleasant truths that others don’t want to say out loud &#8211; or hear. You never suffer from a guilty conscience and small practical jokes greatly excite you!</p>\
+', "snufkin": '<p>You don’t care for material possessions &#8211; if you find something beautiful, you would rather write a poem about it, than own it.</p>\
+<p>You are truly regarded as a friend by others and they appreciate the wisdom you hold. You may get anxious if your personal space is invaded, and you often want a little peace and quiet.</p>\
+', "sniff": '<p>You quickly get excited but get bored just as easily! You like to go on adventures, but you don&#8217;t like it when things get too scary.</p>\
+<p>You strongly believe that possessions lead to happiness. You like to collect a lot of stuff, and especially money is constantly on your mind! But you also like to spend time with your friends.</p>\
+', "stinky": '<p>Like Little My, you like to play practical jokes on others. You enjoy endless mischief and because of that, you are usually not invited to parties or any other things. But of course, you still show up!</p>\
+<p>You understand the value of possessions, but treasures that are too valuable start to haunt you. You sometimes surprise people with abilities they didn&#8217;t think you had.</p>\
+', "hattifatteners": '<p>You like to be part of a larger group and enjoy going on long adventures with them.</p>\
+<p>You sometimes feel indifferent to what goes on around you, and therefore you might be perceived as somewhat introverted or distant. However, you don’t need to explain yourself, as you can do much whatever you want!</p>\
+', "groke": '<p>You are overshadowed by your loneliness and darkness. People fear you and tend to avoid you, but it&#8217;s just because they don&#8217;t understand you.</p>\
+<p>You are not dangerous and you have never harmed anyone. Your gloomy thoughts follow you, but you are still used to getting what you like.</p>\
+', "mymble": '<p>You always glow with happiness, even if your life is not always a bed of roses! You don’t worry about anything (except for the unattainable soulmates in your life), and you strive to lead a very adventurous life!</p>\
+<p>Sometimes you fall in love with the speed of lightning, but you forget about it just as quickly. Like Little My you state your mind without reflecting on how others feel about it. Luckily it is impossible to stay mad at you!</p>\
+', "too-ticky": '<p>You are a wise thinker who is able to solve many kinds of problems in a rational and practical way.</p>\
+<p>Things are in order in your life and you also try to help others achieve the same. Above all you believe that uncertainty gives you peace of mind.</p>\
+', "hemulen": '<p>You appreciate order highly and your humourless nature expects all rules to be followed precisely.</p>\
+<p>Even if you don’t care about the opinion of others, people still enjoy your company because you make them feel safe. Collecting is important to you and it leaves little time for anything else.</p>\
+', "fillyjonk": '<p>You maintain extreme order in your life, both in thought and in your actions. The rules must be followed precisely!</p>\
+<p>You worry and get upset if others play too wildly, and failures depress you a lot. You like to advise others on how to live their lives, guided by your own principles.</p>\
+', "thingummy-and-bob": '<p>You are a very happy and energetic person! Not all understand you perfectly but you understand well what others are saying.</p>\
+<p>You are always kind to others but you want to keep some things secret. Your lust for worldly things may sometimes get you in trouble but you still keep your cool!</p>\
+',
+                        },
+                    }
+                </script>
+
+                <div class="which-moomin full-width-block theme-explor pb-5">
+                    <div id="which-moomin-header" class="which-moomin__header">
+                        <h1 id="which-moomin-heading" class="which-moomin__title">Which Moomin character are you?</h1>
+                        <div id="q-count" class="circle" style="opacity: 0;"></div>
+                    </div>
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+
+                                <form id="quiz-form">
+
+                                    <div class="start-slide" id="q0">
+                                        <div class="row flex-row-reverse align-items-center">
+                                            <div class="col-12 col-sm-6">
+                                                <img class="start-image img-fluid teaser-image"
+                                                    src="src/Which-Moomin-character-are-you.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="col-12 col-sm-6">
+                                                <p>Welcome to the one and only Moomin character personality test.</p>
+                                                <p>Just answer 10 easy questions and you&#8217;ll know which one of the
+                                                    Moomin characters is your best match. Then challenge your friends by
+                                                    sharing your quiz result on Facebook, Twitter or Pinterest.</p>
+                                                <p>Have fun!</p>
+                                                <div class="begin-container">
+                                                    <input class="start-button btn btn-themed mb-3" id="r0_g0"
+                                                        type="button" value="Ok, let's begin!">
+                                                    <br>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="question text-center" id="q1" style='display:none; opacity: 0;'>
+
+                                        <h3>You are more</h3>
+
+                                        <div class="quiz-answer">
+                                            <input class="btn btn-themed answer-radio" id="r1_g1" name="g1"
+                                                type="button" value="practical"
+                                                data-characters="moominpappa,snufkin,too-ticky,hemulen,fillyjonk">
+                                        </div>
+                                        <div class="quiz-answer">
+                                            <input class="btn btn-themed answer-radio" id="r2_g1" name="g1"
+                                                type="button" value="impractical"
+                                                data-characters="snorkmaiden,moominmamma,sniff,mymble,thingummy-and-bob">
+                                        </div>
+                                    </div>
+
+                                    <div class="question text-center" id="q2" style='display:none; opacity: 0;'>
+
+                                        <h3>Do you tend to choose</h3>
+
+                                        <div class="quiz-answer">
+                                            <input class="btn btn-themed answer-radio" id="r1_g2" name="g2"
+                                                type="button" value="rather carefully"
+                                                data-characters="snorkmaiden,groke,too-ticky,fillyjonk,thingummy-and-bob">
+                                        </div>
+                                        <div class="quiz-answer">
+                                            <input class="btn btn-themed answer-radio" id="r2_g2" name="g2"
+                                                type="button" value="somewhat impulsively"
+                                                data-characters="little-my,snufkin,sniff,stinky">
+                                        </div>
+                                    </div>
+
+                                    <div class="question text-center" id="q3" style='display:none; opacity: 0;'>
+
+                                        <h3>Would you rather have</h3>
+
+                                        <div class="quiz-answer">
+                                            <input class="btn btn-themed answer-radio" id="r1_g3" name="g3"
+                                                type="button" value="material things"
+                                                data-characters="snorkmaiden,sniff,hemulen,fillyjonk,thingummy-and-bob">
+                                        </div>
+                                        <div class="quiz-answer">
+                                            <input class="btn btn-themed answer-radio" id="r2_g3" name="g3"
+                                                type="button" value="experiences"
+                                                data-characters="moomintroll,moominpappa,little-my,snufkin,hattifatteners">
+                                        </div>
+                                    </div>
+
+                                    <div class="question text-center" id="q4" style='display:none; opacity: 0;'>
+
+                                        <h3>You are more guided by</h3>
+
+                                        <div class="quiz-answer">
+                                            <input class="btn btn-themed answer-radio" id="r1_g4" name="g4"
+                                                type="button" value="your head"
+                                                data-characters="moominpappa,snufkin,groke,hemulen,fillyjonk">
+                                        </div>
+                                        <div class="quiz-answer">
+                                            <input class="btn btn-themed answer-radio" id="r2_g4" name="g4"
+                                                type="button" value="your heart"
+                                                data-characters="moomintroll,snorkmaiden,moominmamma,sniff,stinky">
+                                        </div>
+                                    </div>
+
+                                    <div class="question text-center" id="q5" style='display:none; opacity: 0;'>
+
+                                        <h3>Would you rather</h3>
+
+                                        <div class="quiz-answer">
+                                            <input class="btn btn-themed answer-radio" id="r1_g5" name="g5"
+                                                type="button" value="stay at home"
+                                                data-characters="moominmamma,sniff,mymble,too-ticky,fillyjonk">
+                                        </div>
+                                        <div class="quiz-answer">
+                                            <input class="btn btn-themed answer-radio" id="r2_g5" name="g5"
+                                                type="button" value="go on an adventure"
+                                                data-characters="moomintroll,moominpappa,little-my,snufkin,stinky,hattifatteners">
+                                        </div>
+                                    </div>
+
+                                    <div class="question text-center" id="q6" style='display:none; opacity: 0;'>
+
+                                        <h3>Would you rather wear</h3>
+
+                                        <div class="quiz-answer">
+                                            <input class="btn btn-themed answer-radio" id="r1_g6" name="g6"
+                                                type="button" value="colorful clothes"
+                                                data-characters="snorkmaiden,moominmamma,little-my,too-ticky,thingummy-and-bob">
+                                        </div>
+                                        <div class="quiz-answer">
+                                            <input class="btn btn-themed answer-radio" id="r2_g6" name="g6"
+                                                type="button" value="black and white"
+                                                data-characters="moominpappa,hattifatteners,groke,hemulen,fillyjonk">
+                                        </div>
+                                    </div>
+
+                                    <div class="question text-center" id="q7" style='display:none; opacity: 0;'>
+
+                                        <h3>Would you say that you are</h3>
+
+                                        <div class="quiz-answer">
+                                            <input class="btn btn-themed answer-radio" id="r1_g7" name="g7"
+                                                type="button" value="a warm-hearted person"
+                                                data-characters="snorkmaiden,moominmamma,groke,mymble,too-ticky">
+                                        </div>
+                                        <div class="quiz-answer">
+                                            <input class="btn btn-themed answer-radio" id="r2_g7" name="g7"
+                                                type="button" value="a cold-headed person"
+                                                data-characters="moominpappa,little-my,stinky,hemulen,fillyjonk">
+                                        </div>
+                                    </div>
+
+                                    <div class="question text-center" id="q8" style='display:none; opacity: 0;'>
+
+                                        <h3>Are you </h3>
+
+                                        <div class="quiz-answer">
+                                            <input class="btn btn-themed answer-radio" id="r1_g8" name="g8"
+                                                type="button" value="shy"
+                                                data-characters="moominmamma,snufkin,sniff,hattifatteners,groke,thingummy-and-bob">
+                                        </div>
+                                        <div class="quiz-answer">
+                                            <input class="btn btn-themed answer-radio" id="r2_g8" name="g8"
+                                                type="button" value="outgoing"
+                                                data-characters="moomintroll,little-my,hattifatteners,mymble">
+                                        </div>
+                                    </div>
+
+                                    <div class="question text-center" id="q9" style='display:none; opacity: 0;'>
+
+                                        <h3>At parties, are you</h3>
+
+                                        <div class="quiz-answer">
+                                            <input class="btn btn-themed answer-radio" id="r1_g9" name="g9"
+                                                type="button" value="the life of the party"
+                                                data-characters="moomintroll,moominpappa,little-my,mymble">
+                                        </div>
+                                        <div class="quiz-answer">
+                                            <input class="btn btn-themed answer-radio" id="r2_g9" name="g9"
+                                                type="button" value="sitting in a corner"
+                                                data-characters="snufkin,hattifatteners,groke,hemulen,thingummy-and-bob,stinky">
+                                        </div>
+                                    </div>
+
+                                    <div class="question text-center" id="q10" style='display:none; opacity: 0;'>
+
+                                        <h3>Would you rather be</h3>
+
+                                        <div class="quiz-answer">
+                                            <input class="btn btn-themed answer-radio" id="r1_g10" name="g10"
+                                                type="button" value="alone"
+                                                data-characters="moominpappa,snufkin,hemulen,thingummy-and-bob">
+                                        </div>
+                                        <div class="quiz-answer">
+                                            <input class="btn btn-themed answer-radio" id="r2_g10" name="g10"
+                                                type="button" value="together with others"
+                                                data-characters="sniff,hattifatteners,groke">
+                                        </div>
+                                    </div>
+
+                                    <div id="submit-section" style="display:none;">
+                                        <input class="btn btn-themed amulet" type="submit" id="quiz-submit" href="#"
+                                            value="See which Moomin you are">
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+
+                        <div id="shares" style="display: none; opacity: 0;">
+                            <div class="row align-items-center">
+
+                                <div class="col-12 col-sm-6">
+                                    <div class="">
+                                        <img id="moomintroll" class="quiz-result-image img-fluid teaser-image force-100"
+                                            src="https://assets.moomin.com/uploads/2015/04/moomintroll.png"
+                                            style="display: none;" alt="Moomintroll"><img id="snorkmaiden"
+                                            class="quiz-result-image img-fluid teaser-image force-100"
+                                            src="https://assets.moomin.com/uploads/2015/04/snorkmaiden.png"
+                                            style="display: none;" alt="Snorkmaiden"><img id="moominmamma"
+                                            class="quiz-result-image img-fluid teaser-image force-100"
+                                            src="https://assets.moomin.com/uploads/2015/04/moominmamma.png"
+                                            style="display: none;" alt="Moominmamma"><img id="moominpappa"
+                                            class="quiz-result-image img-fluid teaser-image force-100"
+                                            src="https://assets.moomin.com/uploads/2015/04/moominpappa.png"
+                                            style="display: none;" alt="Moominpappa"><img id="little-my"
+                                            class="quiz-result-image img-fluid teaser-image force-100"
+                                            src="https://assets.moomin.com/uploads/2015/04/little-my.png"
+                                            style="display: none;" alt="Little My"><img id="snufkin"
+                                            class="quiz-result-image img-fluid teaser-image force-100"
+                                            src="https://assets.moomin.com/uploads/2015/04/snufkin.png"
+                                            style="display: none;" alt="Snufkin"><img id="sniff"
+                                            class="quiz-result-image img-fluid teaser-image force-100"
+                                            src="https://assets.moomin.com/uploads/2015/04/sniff.png"
+                                            style="display: none;" alt="Sniff"><img id="stinky"
+                                            class="quiz-result-image img-fluid teaser-image force-100"
+                                            src="https://assets.moomin.com/uploads/2015/04/stinky.png"
+                                            style="display: none;" alt="Stinky"><img id="hattifatteners"
+                                            class="quiz-result-image img-fluid teaser-image force-100"
+                                            src="https://assets.moomin.com/uploads/2015/04/hattifatteners.png"
+                                            style="display: none;" alt="Hattifatteners"><img id="groke"
+                                            class="quiz-result-image img-fluid teaser-image force-100"
+                                            src="https://assets.moomin.com/uploads/2015/04/groke.png"
+                                            style="display: none;" alt="Groke"><img id="mymble"
+                                            class="quiz-result-image img-fluid teaser-image force-100"
+                                            src="https://assets.moomin.com/uploads/2015/04/mymble.png"
+                                            style="display: none;" alt="Mymble"><img id="too-ticky"
+                                            class="quiz-result-image img-fluid teaser-image force-100"
+                                            src="https://assets.moomin.com/uploads/2015/04/too-ticky.png"
+                                            style="display: none;" alt="Too-Ticky"><img id="hemulen"
+                                            class="quiz-result-image img-fluid teaser-image force-100"
+                                            src="https://assets.moomin.com/uploads/2015/04/hemulen.png"
+                                            style="display: none;" alt="Hemulen"><img id="fillyjonk"
+                                            class="quiz-result-image img-fluid teaser-image force-100"
+                                            src="https://assets.moomin.com/uploads/2015/04/fillyjonk.png"
+                                            style="display: none;" alt="Fillyjonk"><img id="thingummy-and-bob"
+                                            class="quiz-result-image img-fluid teaser-image force-100"
+                                            src="https://assets.moomin.com/uploads/2015/04/thingumy-and-bob.png"
+                                            style="display: none;" alt="Thingumy and Bob">
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6">
+                                    <div id="result">&nbsp;</div>                                    
+                                    <a href="/" id="try-again"
+                                        class="d-block mt-3 social retry">Try again!</a>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /content-wrapper -->
+        </div>
+    </main>
+
+    <script type='text/javascript'
+        src='src/sample.js'
+        id='theme-js-js'></script>
+
+</body>
+
+</html>
