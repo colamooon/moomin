@@ -917,7 +917,7 @@
           </div>
         </div>
         <!-- /content-wrapper -->
-        <a href="index.html" id="try-again" class="d-block mt-3 social retry">
+        <a id="try-again" class="d-block mt-3 social retry" href="index.html">
           <div
             style="
               font-family: NanumBarunpenB;
@@ -936,13 +936,78 @@
             <div>돌아가기</div>
           </div>
         </a>
+
+        <div
+          style="
+            font-family: NanumBarunpenB;
+            font-size: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            /* background-color: #ffffff; */
+            padding: 20px;
+            border-radius: 50%;
+          "
+          onclick="playBg();"
+        >
+          <div>BGM</div>
+        </div>
       </div>
     </main>
+    <!-- <audio loop>
+      <source src="./src/a.mp3" type="audio/mpeg" />
+      <source src="./src/b.mp3" type="audio/mpeg" />
+    </audio> -->
 
     <script
       type="text/javascript"
       src="./src/sample.js"
       id="theme-js-js"
     ></script>
+    <script>
+      var playList = [
+        "./src/a.mp3",
+        "./src/b.mp3",
+        "./src/c.mp3",
+        "./src/d.mp3",
+        "./src/e.mp3",
+        "./src/f.mp3",
+        "./src/g.mp3",
+        "./src/h.mp3",
+        "./src/i.mp3",
+        "./src/j.mp3",
+      ];
+      var i = 0;
+      const audio = new Audio(playList[i]);
+
+      function playBg() {
+        audio.play();
+      }
+      function restart() {
+        var questions = document.querySelectorAll(".question");
+        console.log("]-----[ questions ]-----[ ", questions);
+        // question.style.display = "none";
+        for (var x = 0; x < questions.length; x++) {
+          questions[x].style.display = "none";
+        }
+
+        var finddoc = document.getElementById("q0");
+        finddoc.style.display = "block";
+        finddoc.style.opacity = 100;
+      }
+      audio.onended = (event) => {
+        if (i == 9) {
+          i = 0;
+        } else {
+          i++;
+        }
+
+        console.log("]-----[ i ]-----[ ", i);
+        audio.src = playList[i];
+        audio.play();
+      };
+    </script>
   </body>
 </html>
